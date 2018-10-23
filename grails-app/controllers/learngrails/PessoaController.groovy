@@ -1,13 +1,23 @@
 package learngrails
 
+import grails.converters.JSON
+
 class PessoaController {
     def obterTodasPessoa(){
         def pessoa = Pessoa.getAll()
-        pessoa.each {p ->
-            println(p.nome)
-            render "meu nome é " + p.nome
-        }
+        respond pessoa
 
+    }
+
+    //sava
+    def save(Pessoa pessoa){
+        //sempre informações chega no params
+        println(pessoa.nome)
+
+        //flush - persiste no banco
+        pessoa.save(flush:true)
+        //equivale ao return
+        respond "deu certo"
     }
 }
 

@@ -14,6 +14,6 @@ class UrlMappings {
         "500"(view: '/error')
         "404"(view: '/notFound')
 
-        "/pessoa/"(controller: 'Pessoa', action: 'obterTodasPessoa')
+        "/pessoa/get"(controller: 'Pessoa', action: 'obterTodasPessoa')
     }
 }
