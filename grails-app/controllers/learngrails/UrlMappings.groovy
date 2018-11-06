@@ -15,5 +15,9 @@ class UrlMappings {
         "404"(view: '/notFound')
 
         "/pessoa/get"(controller: 'Pessoa', action: 'obterTodasPessoa')
+
+        "/pessoa/delete/$id"(controller: 'Pessoa', action: 'removePorId')
+
+        "/pessoa/put/"(controller: 'Pessoa', action: 'alterarDadosPessoa')
     }
 }
